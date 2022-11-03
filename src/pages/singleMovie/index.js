@@ -1,0 +1,1 @@
+const movie = 'https://api.themoviedb.org/3/movie/13?api_key=c796163b1823bf737508df978a5d4ac6&language=en-US'

@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 
-import dotenv from 'dotenv'
-import axios from 'axios'
-
-function useFetch() {
-    dotenv.config()
-    console.log(process.env.HI);
-    // axios.create({
-    //     baseURL: ''
-    // })
-    const [data, setData] = useState({})
-    // axios.get
+function useFetch(url) {
+    let newUrl = `https://api.themoviedb.org/3/${url}`
+    useEffect(() => {
+        fetch(newUrl).then(res => res.json()).then(res => {
+            return [null, res]
+        }).catch(err => {
+            return [err, null]
+        })
+    }, [])
 }
 
 export default useFetch

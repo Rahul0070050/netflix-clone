@@ -6,6 +6,9 @@ export const useStyle = createUseStyles({
       margin: 0,
       padding: 0,
       fontFamily: 'sans-serif'
+    },
+    body: {
+      backgroundColor: 'black'
     }
   }
 })
